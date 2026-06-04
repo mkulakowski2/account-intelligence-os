@@ -35,7 +35,6 @@ Account Intelligence OS is the first wedge toward a broader AI Decision Intellig
 - privacy and security model
 - optional Postgres + ClickHouse architecture
 - synthetic examples
-- blog starter kit
 - roadmap from OSS blueprint to SaaS product
 
 ## Core agents
@@ -112,7 +111,6 @@ skills/        Reusable source, reasoning, and output skills
 contracts/     JSON schemas for structured outputs and telemetry
 docs/          Architecture, security, roadmap, and operating model
 examples/      Synthetic outputs and sample evidence
-blog/          Public blog starter drafts
 src/           Minimal Python utilities for schema validation and events
 ```
 
