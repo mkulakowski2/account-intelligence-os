@@ -75,7 +75,7 @@ Try additional sample accounts:
 
 ```bash
 account-intel --account Snowflake
-account-intel --account Salesforce
+account-intel --account StarRocks
 ```
 
 Reports are written to:
@@ -185,7 +185,7 @@ In live mode, the report includes source URLs. In demo mode, it uses local sampl
 Run multiple accounts in one command:
 
 ```bash
-account-intel --accounts Datadog Snowflake Salesforce --mode demo --parallel 3
+account-intel --accounts Datadog Snowflake StarRocks --mode demo --parallel 3
 ```
 
 Or run from a file:
@@ -214,7 +214,7 @@ Batch runs create individual reports plus a portfolio index:
 reports/
 ├── datadog_digital_twin.html
 ├── snowflake_digital_twin.html
-├── salesforce_digital_twin.html
+├── starrocks_digital_twin.html
 └── index.html
 ```
 
@@ -255,7 +255,7 @@ The workforce generates:
 reports/
 ├── datadog_digital_twin.html
 ├── snowflake_digital_twin.html
-├── salesforce_digital_twin.html
+├── starrocks_digital_twin.html
 └── index.html
 ```
 
