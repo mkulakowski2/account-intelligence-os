@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DecisionEvent",
+  "type": "object",
+  "required": [
+    "run_id",
+    "event_time",
+    "agent_name",
+    "account_name",
+    "decision_type",
+    "decision",
+    "confidence",
+    "evidence_refs",
+    "quality_gate_status"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "event_time": {
+      "type": "string"
+    },
+    "agent_name": {
+      "type": "string"
+    },
+    "account_name": {
+      "type": "string"
+    },
+    "workflow_id": {
+      "type": "string"
+    },
+    "decision_type": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "unknown"
+      ]
+    },
+    "latency_ms": {
+      "type": "number"
+    },
+    "cost_usd": {
+      "type": "number"
+    },
+    "model": {
+      "type": "string"
+    },
+    "tools_used": {
+      "type": "array"
+    },
+    "evidence_refs": {
+      "type": "array"
+    },
+    "policy_checks": {
+      "type": "array"
+    },
+    "quality_gate_status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "WARN"
+      ]
+    },
+    "human_feedback": {
+      "type": "string"
+    },
+    "business_outcome": {
+      "type": "string"
+    }
+  }
+}

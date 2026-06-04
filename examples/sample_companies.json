@@ -1,0 +1,137 @@
+{
+  "companies": [
+    {
+      "name": "Datadog",
+      "slug": "datadog",
+      "description": "Sample offline profile for demonstrating the Enterprise Digital Twin workflow.",
+      "recent_events": [
+        {
+          "title": "Expansion from observability into broader platform operations",
+          "why_it_matters": "A broader platform motion creates openings around AI runtime visibility, decision telemetry, and operational intelligence.",
+          "source": "synthetic_sample",
+          "confidence": 0.82
+        },
+        {
+          "title": "Security and developer workflow adjacency",
+          "why_it_matters": "Security and developer workflows often produce high-cardinality telemetry and real-time investigation needs.",
+          "source": "synthetic_sample",
+          "confidence": 0.76
+        }
+      ],
+      "technology_signals": [
+        {
+          "title": "Observability-native architecture pattern",
+          "technologies": ["OpenTelemetry", "Kubernetes", "event streams", "high-cardinality analytics"],
+          "why_it_matters": "This suggests strong fit for real-time telemetry analytics and AI agent observability patterns.",
+          "source": "synthetic_sample",
+          "confidence": 0.86
+        },
+        {
+          "title": "AI operations use case adjacency",
+          "technologies": ["LLM telemetry", "trace analytics", "agent evaluation", "runtime monitoring"],
+          "why_it_matters": "AI systems create new telemetry streams that resemble observability data but require business-level interpretation.",
+          "source": "synthetic_sample",
+          "confidence": 0.81
+        }
+      ],
+      "organization_signals": [
+        {
+          "title": "Platform buyer alignment",
+          "why_it_matters": "Platform, SRE, security, and data leaders can all care about AI operational intelligence, but each needs a different value framing.",
+          "source": "synthetic_sample",
+          "confidence": 0.74
+        }
+      ],
+      "recommended_plays": [
+        {
+          "title": "AI Runtime Intelligence Workshop",
+          "recommended_action": "Position a workshop around how AI agents create telemetry, decisions, failures, costs, and governance questions that traditional observability does not fully answer.",
+          "why_now": "Observability platforms are natural buyers for the next generation of AI operations patterns.",
+          "confidence": 0.84
+        },
+        {
+          "title": "Decision Event Analytics Demo",
+          "recommended_action": "Show how decision events can be stored, scored, and analyzed as a high-volume event stream.",
+          "why_now": "It connects the account's existing telemetry worldview to the emerging Decision Intelligence category.",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "name": "Snowflake",
+      "slug": "snowflake",
+      "description": "Sample offline profile for demonstrating account intelligence over a cloud data platform company.",
+      "recent_events": [
+        {
+          "title": "Data cloud expanding toward AI application development",
+          "why_it_matters": "AI applications require governed data access, semantic context, observability, and operational feedback loops.",
+          "source": "synthetic_sample",
+          "confidence": 0.8
+        }
+      ],
+      "technology_signals": [
+        {
+          "title": "Governed data and AI workload convergence",
+          "technologies": ["data cloud", "governance", "semantic layer", "AI apps"],
+          "why_it_matters": "The platform is well-aligned to decision context, but operational decision telemetry may require a complementary runtime analytics layer.",
+          "source": "synthetic_sample",
+          "confidence": 0.78
+        }
+      ],
+      "organization_signals": [
+        {
+          "title": "Enterprise buyer complexity",
+          "why_it_matters": "Data, AI, platform, governance, and application teams may all influence AI architecture decisions.",
+          "source": "synthetic_sample",
+          "confidence": 0.72
+        }
+      ],
+      "recommended_plays": [
+        {
+          "title": "AI Well-Architected Review",
+          "recommended_action": "Frame account intelligence around architecture maturity, operational risk, governance, and decision outcomes.",
+          "why_now": "Enterprises are moving from AI pilots to production operating models.",
+          "confidence": 0.81
+        }
+      ]
+    },
+    {
+      "name": "ClickHouse",
+      "slug": "clickhouse",
+      "description": "Sample offline profile for demonstrating real-time account intelligence and decision-event analytics.",
+      "recent_events": [
+        {
+          "title": "Real-time analytics category momentum",
+          "why_it_matters": "AI agents, observability, security, and customer-facing analytics all generate high-volume event streams.",
+          "source": "synthetic_sample",
+          "confidence": 0.86
+        }
+      ],
+      "technology_signals": [
+        {
+          "title": "Event-native architecture fit",
+          "technologies": ["ClickHouse", "Kafka", "OpenTelemetry", "real-time analytics", "agent telemetry"],
+          "why_it_matters": "Decision events from AI systems are a natural analytical workload for low-latency, high-volume databases.",
+          "source": "synthetic_sample",
+          "confidence": 0.9
+        }
+      ],
+      "organization_signals": [
+        {
+          "title": "Solution architecture-led market education",
+          "why_it_matters": "The category requires practitioners who can explain real-time AI architecture to both executives and engineers.",
+          "source": "synthetic_sample",
+          "confidence": 0.79
+        }
+      ],
+      "recommended_plays": [
+        {
+          "title": "Decision Intelligence Reference Architecture",
+          "recommended_action": "Create a public demo showing agents producing metadata-only decision events and analyzing them in ClickHouse.",
+          "why_now": "The account intelligence demo can become the wedge into enterprise AI control planes.",
+          "confidence": 0.88
+        }
+      ]
+    }
+  ]
+}

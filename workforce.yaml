@@ -1,0 +1,25 @@
+# Account Intelligence OS Phase 1 Workforce Manifest
+# This file defines a scheduled workforce of specialized AI analysts.
+
+name: Account Intelligence Workforce
+mode: demo          # auto | demo | live
+parallel: 3
+llm_provider: none # none | openai | anthropic
+
+schedule:
+  daily: "07:00"
+
+accounts:
+  - Datadog
+  - Snowflake
+  - ClickHouse
+
+agents:
+  research:
+    enabled: true
+  technology:
+    enabled: true
+  organization:
+    enabled: true
+  opportunity:
+    enabled: true

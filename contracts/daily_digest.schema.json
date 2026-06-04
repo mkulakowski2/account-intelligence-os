@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DailyDigest",
+  "type": "object",
+  "required": [
+    "run_id",
+    "run_date",
+    "persona_view",
+    "priority_accounts"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "run_date": {
+      "type": "string"
+    },
+    "persona_view": {
+      "type": "string"
+    },
+    "priority_accounts": {
+      "type": "array"
+    }
+  }
+}

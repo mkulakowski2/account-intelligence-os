@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UseCase",
+  "type": "object",
+  "required": [
+    "account_name",
+    "title",
+    "opportunity",
+    "current_state",
+    "platform_advantage",
+    "business_impact",
+    "estimated_value",
+    "discovery_questions",
+    "evidence_refs"
+  ],
+  "properties": {
+    "account_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "opportunity": {
+      "type": "string"
+    },
+    "current_state": {
+      "type": "string"
+    },
+    "platform_advantage": {
+      "type": "array"
+    },
+    "business_impact": {
+      "type": "string"
+    },
+    "estimated_value": {
+      "type": "string"
+    },
+    "discovery_questions": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "evidence_refs": {
+      "type": "array"
+    }
+  }
+}

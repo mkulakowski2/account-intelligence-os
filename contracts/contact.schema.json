@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Contact",
+  "type": "object",
+  "required": [
+    "account_name",
+    "name",
+    "title",
+    "verification_status",
+    "source_refs"
+  ],
+  "properties": {
+    "account_name": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "linkedin_url": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "VERIFIED",
+        "UNVERIFIED"
+      ]
+    },
+    "d1_warm": {
+      "type": "number"
+    },
+    "d2_authority": {
+      "type": "number"
+    },
+    "d3_intent": {
+      "type": "number"
+    },
+    "d4_quality": {
+      "type": "number"
+    },
+    "d5_relationship": {
+      "type": "number"
+    },
+    "overall_score": {
+      "type": "number"
+    },
+    "tier": {
+      "type": "string"
+    },
+    "source_refs": {
+      "type": "array"
+    }
+  }
+}

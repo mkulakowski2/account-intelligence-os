@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snowflake Enterprise Digital Twin</title>
+  <style>
+    :root {
+      --bg: #07090d;
+      --bg2: #0d1117;
+      --panel: rgba(18, 24, 33, 0.86);
+      --panel2: rgba(29, 37, 50, 0.76);
+      --text: #f4f7fb;
+      --muted: #9aa7b8;
+      --line: rgba(255,255,255,0.11);
+      --brand: #ffcc02;
+      --brand2: #f59e0b;
+      --blue: #66d9ef;
+      --green: #39d98a;
+      --red: #ff6b6b;
+      --shadow: 0 24px 80px rgba(0,0,0,.42);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(255,204,2,.16), transparent 34rem),
+        radial-gradient(circle at 80% 12%, rgba(102,217,239,.12), transparent 30rem),
+        linear-gradient(180deg, #05070a 0%, #0a0d12 54%, #06080b 100%);
+      line-height: 1.5;
+    }
+    a { color: #ffe08a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page { max-width: 1220px; margin: 0 auto; padding: 36px 22px 90px; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      padding: 36px;
+      background: linear-gradient(135deg, rgba(18,24,33,.94), rgba(13,17,23,.78));
+      box-shadow: var(--shadow);
+    }
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(90deg, rgba(255,204,2,.28), transparent 22%, rgba(102,217,239,.16));
+      opacity: .35;
+      pointer-events: none;
+    }
+    .hero > * { position: relative; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--brand);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 { font-size: clamp(40px, 6vw, 76px); line-height: .96; letter-spacing: -.055em; margin: 0 0 16px; }
+    h2 { font-size: 28px; letter-spacing: -.03em; margin: 0; }
+    h3 { font-size: 21px; letter-spacing: -.02em; margin: 0 0 10px; }
+    h4 { font-size: 17px; margin: 0 0 10px; }
+    .hero-copy { max-width: 820px; color: var(--muted); font-size: 17px; margin: 0; }
+    .notice { margin-top: 18px; color: #d7dde7; font-size: 14px; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .badge { border: 1px solid var(--line); background: rgba(255,255,255,.055); border-radius: 999px; padding: 8px 12px; color: #dbe4f0; font-size: 13px; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+    .kpi { border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.045); padding: 18px; }
+    .kpi span { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
+    .kpi strong { display: block; font-size: 30px; margin-top: 4px; }
+    .opportunity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+    .opportunity-card, .panel, .agent-section { border: 1px solid var(--line); background: var(--panel); border-radius: 26px; padding: 24px; box-shadow: 0 16px 50px rgba(0,0,0,.24); }
+    .opportunity-card { background: linear-gradient(180deg, rgba(255,204,2,.10), rgba(18,24,33,.88)); }
+    .card-topline { display:flex; justify-content:space-between; align-items:center; color: var(--brand); font-size: 12px; font-weight: 800; letter-spacing:.1em; text-transform:uppercase; margin-bottom: 12px; }
+    .opportunity-card p, .agent-summary, .signal-card p { color: var(--muted); margin: 0 0 14px; }
+    .action-box { border-left: 3px solid var(--brand); background: rgba(255,204,2,.08); padding: 12px 14px; border-radius: 12px; color: #f8fafc; font-size: 14px; }
+    .agent-section { margin-top: 22px; }
+    .section-heading { display:flex; justify-content:space-between; align-items:flex-start; gap: 18px; margin-bottom: 12px; }
+    .agent-score { min-width: 96px; text-align:right; border-radius: 18px; padding: 10px 12px; background: rgba(255,255,255,.05); border: 1px solid var(--line); }
+    .agent-score span { display:block; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.09em; }
+    .agent-score strong { font-size: 24px; }
+    .high strong, .high.score { color: var(--green); }
+    .medium strong, .medium.score { color: var(--brand); }
+    .low strong, .low.score { color: var(--red); }
+    .chip-row, .mini-pills { display:flex; flex-wrap:wrap; gap: 8px; margin: 14px 0 0; }
+    .chip, .mini-pill { border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.05); color:#dbe4f0; padding:6px 10px; font-size:12px; }
+    .signals-grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+    .signal-card { border:1px solid var(--line); border-radius: 20px; background: rgba(7,9,13,.42); padding: 18px; }
+    .signal-meta { display:flex; justify-content:space-between; align-items:center; gap:12px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing:.08em; margin-bottom: 10px; }
+    .score { font-weight: 800; }
+    .source-row { margin-top: 12px; display:flex; gap:10px; flex-wrap:wrap; font-size: 13px; }
+    .two-col { display:grid; grid-template-columns: 1.15fr .85fr; gap: 18px; margin-top: 22px; }
+    .timeline { list-style:none; padding:0; margin:0; }
+    .timeline li { position:relative; display:flex; gap:14px; padding: 0 0 18px; }
+    .timeline li:not(:last-child):before { content:""; position:absolute; left:7px; top:20px; bottom:0; width:1px; background:var(--line); }
+    .dot { width:15px; height:15px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 5px rgba(255,204,2,.12); margin-top:4px; flex:0 0 auto; }
+    .timeline p { margin:4px 0; color:var(--muted); }
+    .timeline small { color:#c6cfda; }
+    .sources { margin: 6px 0 0; padding-left: 20px; color: var(--muted); }
+    .sources li { margin: 8px 0; overflow-wrap:anywhere; }
+    pre { white-space: pre-wrap; overflow:auto; max-height:420px; border:1px solid var(--line); border-radius:20px; padding:18px; background:#05070a; color:#cbd5e1; font-size:12px; }
+    .footer { margin-top:28px; color:var(--muted); font-size:13px; text-align:center; }
+    @media (max-width: 900px) { .kpi-grid, .opportunity-grid, .signals-grid, .two-col { grid-template-columns: 1fr; } .hero { padding: 26px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Account Intelligence OS · Enterprise Digital Twin</p>
+      <h1>Snowflake</h1>
+      <p class="hero-copy">Live Enterprise Digital Twin generated from 23 web search sources. Agent summaries use LLM synthesis when an OpenAI or Anthropic key is configured; otherwise they use extractive search-only findings.</p>
+      <p class="notice">Live mode used external search and optional LLM synthesis based on configured keys.</p>
+      <div class="meta-row">
+        <span class="badge">Live Intelligence</span>
+        <span class="badge">Generated 2026-06-03 23:07 UTC</span>
+        <span class="badge">Metadata-first report</span>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi"><span>Agents</span><strong>4</strong></div>
+        <div class="kpi"><span>Findings</span><strong>18</strong></div>
+        <div class="kpi"><span>Avg Confidence</span><strong>0.83</strong></div>
+        <div class="kpi"><span>Sources</span><strong>11</strong></div>
+      </div>
+    </section>
+
+    <section style="margin-top:28px">
+      <p class="eyebrow">Executive Plays</p>
+      <h2>Recommended Account Moves</h2>
+      <div class="opportunity-grid">
+          <article class="opportunity-card">
+            <div class="card-topline"><span>Recommended Play</span><b>0.90</b></div>
+            <h3>Apache Iceberg Innovations</h3>
+            <p>This innovation allows customers to accelerate their open lakehouse strategies, which is crucial for data access and analysis.</p>
+            <div class="action-box"><strong>Next move</strong><br>Review this signal with the account team.</div>
+          </article>
+        
+          <article class="opportunity-card">
+            <div class="card-topline"><span>Recommended Play</span><b>0.80</b></div>
+            <h3>Acquisition of AI Startup Natoma</h3>
+            <p>Acquiring Natoma aligns with Snowflake&#x27;s strategy to enhance its AI capabilities, which is a key growth area in the tech industry.</p>
+            <div class="action-box"><strong>Next move</strong><br>Review this signal with the account team.</div>
+          </article>
+        
+          <article class="opportunity-card">
+            <div class="card-topline"><span>Recommended Play</span><b>0.90</b></div>
+            <h3>Sridhar Ramaswamy Becomes CEO</h3>
+            <p>The transition to a new CEO often indicates a shift in company strategy and priorities.</p>
+            <div class="action-box"><strong>Next move</strong><br>Review this signal with the account team.</div>
+          </article>
+        
+          <article class="opportunity-card">
+            <div class="card-topline"><span>Recommended Play</span><b>0.80</b></div>
+            <h3>Launch of Cortex AI Initiative</h3>
+            <p>The Cortex AI initiative represents a significant investment in making AI accessible within Snowflake&#x27;s platform, which could enhance its competitive edge.</p>
+            <div class="action-box"><strong>Next move</strong><br>Review this signal with the account team.</div>
+          </article>
+        
+          <article class="opportunity-card">
+            <div class="card-topline"><span>Recommended Play</span><b>0.80</b></div>
+            <h3>Focus on AI and Data Platform Engineering Roles</h3>
+            <p>The hiring of Senior AI/Data Platform Engineers indicates a strategic push towards enhancing AI capabilities within Snowflake&#x27;s platform, aligning with industry trends in AI integration.</p>
+            <div class="action-box"><strong>Next move</strong><br>Review this signal with the account team.</div>
+          </article>
+        </div>
+    </section>
+
+    
+          <section class="agent-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Agent Analysis</p>
+                <h2>Research</h2>
+              </div>
+              <div class="agent-score high">
+                <span>High</span>
+                <strong>0.80</strong>
+              </div>
+            </div>
+            <p class="agent-summary">Snowflake is actively enhancing its product offerings and strategic partnerships, particularly in the AI and data management sectors, while also focusing on financial performance and innovation.</p>
+            <div class="chip-row"><span class='chip'>4 findings</span><span class='chip'>live_llm</span></div>
+            <div class="signals-grid">
+              <article class="signal-card">
+                <div class="signal-meta"><span>Product Innovation</span><span class="score high">0.90</span></div>
+                <h4>Apache Iceberg Innovations</h4>
+                <p>This innovation allows customers to accelerate their open lakehouse strategies, which is crucial for data access and analysis.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.snowflake.com/en/news/press-releases/snowflake-unveils-apache-iceberg-innovations" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Acquisition</span><span class="score high">0.80</span></div>
+                <h4>Acquisition of AI Startup Natoma</h4>
+                <p>Acquiring Natoma aligns with Snowflake&#x27;s strategy to enhance its AI capabilities, which is a key growth area in the tech industry.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.cnbc.com/2026/05/28/snowflake-snow-software-stock-rally.html" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Product Launch</span><span class="score high">0.85</span></div>
+                <h4>Snowflake CoCo</h4>
+                <p>Snowflake CoCo aims to redefine enterprise AI development, which could significantly impact how businesses innovate and utilize AI.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.snowflake.com/en/news/press-releases" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Financial Performance</span><span class="score medium">0.75</span></div>
+                <h4>Non-GAAP Financial Metrics</h4>
+                <p>Understanding Snowflake&#x27;s financial metrics is essential for assessing its profitability and operational efficiency.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://s26.q4cdn.com/463892824/files/doc_financials/2026/q4/Q4-FY2026-Investor-Presentation_vF.pdf" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            </div>
+          </section>
+        
+          <section class="agent-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Agent Analysis</p>
+                <h2>Technology</h2>
+              </div>
+              <div class="agent-score high">
+                <span>High</span>
+                <strong>0.85</strong>
+              </div>
+            </div>
+            <p class="agent-summary">Snowflake is actively evolving its platform to enhance AI capabilities and streamline data engineering processes, as evidenced by its architectural advancements and hiring patterns.</p>
+            <div class="chip-row"><span class='chip'>4 findings</span><span class='chip'>live_llm</span></div>
+            <div class="signals-grid">
+              <article class="signal-card">
+                <div class="signal-meta"><span>Technology Adoption</span><span class="score high">0.90</span></div>
+                <h4>Evolution to AI Data Cloud</h4>
+                <p>Snowflake&#x27;s transition to an AI Data Cloud indicates a strategic focus on integrating AI and machine learning capabilities into its core offerings, which can enhance data analytics and operational efficiency for enterprises.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.infometry.net/blog/snowflake/snowflakes-evolution-into-a-ai-native-data-cloud" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Product Development</span><span class="score high">0.85</span></div>
+                <h4>Introduction of Snowflake CoCo and Datastream</h4>
+                <p>The introduction of Snowflake CoCo and Datastream reflects a commitment to simplifying data engineering processes and enhancing real-time data handling, crucial for AI applications.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.snowflake.com/en/blog/data-development-simple-as-prompt" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Hiring Patterns</span><span class="score high">0.80</span></div>
+                <h4>Focus on AI and Data Platform Engineering Roles</h4>
+                <p>The hiring of Senior AI/Data Platform Engineers indicates a strategic push towards enhancing AI capabilities within Snowflake&#x27;s platform, aligning with industry trends in AI integration.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://careers.jacobs.com/en_US/careers/JobDetail/Senior-AI-Data-Platform-Engineer-Snowflake-GenAI/40087" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Architectural Framework</span><span class="score medium">0.75</span></div>
+                <h4>Snowflake Well-Architected Framework</h4>
+                <p>The introduction of a Well-Architected Framework for data platforms signifies Snowflake&#x27;s commitment to ensuring security, reliability, and performance, which are critical for enterprise adoption.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.snowflake.com/en/blog/engineering/well-architected-framework" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            </div>
+          </section>
+        
+          <section class="agent-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Agent Analysis</p>
+                <h2>Organization</h2>
+              </div>
+              <div class="agent-score high">
+                <span>High</span>
+                <strong>0.80</strong>
+              </div>
+            </div>
+            <p class="agent-summary">Snowflake is undergoing significant leadership changes and strategic shifts towards AI and machine learning, with a focus on expanding its workforce and product offerings in these areas.</p>
+            <div class="chip-row"><span class='chip'>5 findings</span><span class='chip'>live_llm</span></div>
+            <div class="signals-grid">
+              <article class="signal-card">
+                <div class="signal-meta"><span>Leadership Change</span><span class="score high">0.90</span></div>
+                <h4>Sridhar Ramaswamy Becomes CEO</h4>
+                <p>The transition to a new CEO often indicates a shift in company strategy and priorities.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://salesmotion.io/company-intelligence/snowflake" target="_blank" rel="noreferrer">Source</a><a href="https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Hiring Growth</span><span class="score high">0.85</span></div>
+                <h4>Expansion of AI/ML Teams</h4>
+                <p>Hiring in AI/ML roles indicates a commitment to enhancing capabilities in these critical areas, which can drive future growth.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://salesmotion.io/company-intelligence/snowflake" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Product Development</span><span class="score high">0.80</span></div>
+                <h4>Launch of Cortex AI Initiative</h4>
+                <p>The Cortex AI initiative represents a significant investment in making AI accessible within Snowflake&#x27;s platform, which could enhance its competitive edge.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>New Executive Appointment</span><span class="score medium">0.75</span></div>
+                <h4>Anahita Tafvizi Appointed Chief Data Analytics Officer</h4>
+                <p>This appointment highlights Snowflake&#x27;s focus on strengthening its data analytics capabilities, which is crucial for its AI strategy.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.cdomagazine.tech/leadership-moves/snowflake-appoints-anahita-tafvizi-as-chief-data-analytics-officer" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Strategic Focus</span><span class="score medium">0.70</span></div>
+                <h4>AI/ML Container Services and Document AI Solutions</h4>
+                <p>The introduction of new AI/ML services indicates Snowflake&#x27;s commitment to enhancing its product offerings in response to market demands.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            </div>
+          </section>
+        
+          <section class="agent-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Agent Analysis</p>
+                <h2>Opportunity</h2>
+              </div>
+              <div class="agent-score high">
+                <span>High</span>
+                <strong>0.85</strong>
+              </div>
+            </div>
+            <p class="agent-summary">Snowflake is strategically enhancing its product offerings and capabilities in AI and data management through acquisitions, leadership changes, and new product launches, while also focusing on financial performance.</p>
+            <div class="chip-row"><span class='chip'>5 findings</span><span class='chip'>live_llm</span></div>
+            <div class="signals-grid">
+              <article class="signal-card">
+                <div class="signal-meta"><span>Product Innovation</span><span class="score high">0.90</span></div>
+                <h4>Apache Iceberg Innovations</h4>
+                <p>This innovation allows customers to accelerate their open lakehouse strategies, which is crucial for data access and analysis.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.snowflake.com/en/news/press-releases/snowflake-unveils-apache-iceberg-innovations" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Acquisition</span><span class="score high">0.80</span></div>
+                <h4>Acquisition of AI Startup Natoma</h4>
+                <p>Acquiring Natoma aligns with Snowflake&#x27;s strategy to enhance its AI capabilities, which is a key growth area in the tech industry.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.cnbc.com/2026/05/28/snowflake-snow-software-stock-rally.html" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Leadership Change</span><span class="score high">0.90</span></div>
+                <h4>Sridhar Ramaswamy Becomes CEO</h4>
+                <p>The transition to a new CEO often indicates a shift in company strategy and priorities.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://salesmotion.io/company-intelligence/snowflake" target="_blank" rel="noreferrer">Source</a><a href="https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Product Development</span><span class="score high">0.80</span></div>
+                <h4>Launch of Cortex AI Initiative</h4>
+                <p>The Cortex AI initiative represents a significant investment in making AI accessible within Snowflake&#x27;s platform, which could enhance its competitive edge.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            
+              <article class="signal-card">
+                <div class="signal-meta"><span>Hiring Patterns</span><span class="score high">0.80</span></div>
+                <h4>Focus on AI and Data Platform Engineering Roles</h4>
+                <p>The hiring of Senior AI/Data Platform Engineers indicates a strategic push towards enhancing AI capabilities within Snowflake&#x27;s platform, aligning with industry trends in AI integration.</p>
+                <div class="mini-pills"></div>
+                <div class="source-row"><a href="https://careers.jacobs.com/en_US/careers/JobDetail/Senior-AI-Data-Platform-Engineer-Snowflake-GenAI/40087" target="_blank" rel="noreferrer">Source</a></div>
+              </article>
+            </div>
+          </section>
+        
+
+    <section class="two-col">
+      <div class="panel">
+        <p class="eyebrow">Decision Trail</p>
+        <h2>Agent Decision Events</h2>
+        <ol class="timeline">
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Research</strong>
+              <p>Snowflake is actively enhancing its product offerings and strategic partnerships, particularly in the AI and data management sectors, while also focusing on financial performance and innovation.</p>
+              <small>confidence 0.8 · 4 findings</small>
+            </div>
+          </li>
+        
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Technology</strong>
+              <p>Snowflake is actively evolving its platform to enhance AI capabilities and streamline data engineering processes, as evidenced by its architectural advancements and hiring patterns.</p>
+              <small>confidence 0.85 · 4 findings</small>
+            </div>
+          </li>
+        
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Organization</strong>
+              <p>Snowflake is undergoing significant leadership changes and strategic shifts towards AI and machine learning, with a focus on expanding its workforce and product offerings in these areas.</p>
+              <small>confidence 0.8 · 5 findings</small>
+            </div>
+          </li>
+        
+          <li>
+            <span class="dot"></span>
+            <div>
+              <strong>Opportunity</strong>
+              <p>Snowflake is strategically enhancing its product offerings and capabilities in AI and data management through acquisitions, leadership changes, and new product launches, while also focusing on financial performance.</p>
+              <small>confidence 0.85 · 5 findings</small>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="panel">
+        <p class="eyebrow">Product Direction</p>
+        <h2>Why This Matters</h2>
+        <p class="agent-summary">Digital twins become more valuable when they are run continuously. The next frontier is historical memory, portfolio-level intelligence, and decision analytics across agent fleets.</p>
+        <div class="chip-row"><span class="chip">Historical memory</span><span class="chip">Portfolio intelligence</span><span class="chip">Signal scoring</span><span class="chip">Decision analytics</span></div>
+      </div>
+    </section>
+
+    <section class='panel'><p class='eyebrow'>Evidence</p><h2>Sources</h2><ol class='sources'><li><a href="https://www.snowflake.com/en/news/press-releases/snowflake-unveils-apache-iceberg-innovations" target="_blank" rel="noreferrer">https://www.snowflake.com/en/news/press-releases/snowflake-unveils-apache-iceberg-innovations</a></li><li><a href="https://www.cnbc.com/2026/05/28/snowflake-snow-software-stock-rally.html" target="_blank" rel="noreferrer">https://www.cnbc.com/2026/05/28/snowflake-snow-software-stock-rally.html</a></li><li><a href="https://www.snowflake.com/en/news/press-releases" target="_blank" rel="noreferrer">https://www.snowflake.com/en/news/press-releases</a></li><li><a href="https://s26.q4cdn.com/463892824/files/doc_financials/2026/q4/Q4-FY2026-Investor-Presentation_vF.pdf" target="_blank" rel="noreferrer">https://s26.q4cdn.com/463892824/files/doc_financials/2026/q4/Q4-FY2026-Investor-Presentation_vF.pdf</a></li><li><a href="https://www.infometry.net/blog/snowflake/snowflakes-evolution-into-a-ai-native-data-cloud" target="_blank" rel="noreferrer">https://www.infometry.net/blog/snowflake/snowflakes-evolution-into-a-ai-native-data-cloud</a></li><li><a href="https://www.snowflake.com/en/blog/data-development-simple-as-prompt" target="_blank" rel="noreferrer">https://www.snowflake.com/en/blog/data-development-simple-as-prompt</a></li><li><a href="https://careers.jacobs.com/en_US/careers/JobDetail/Senior-AI-Data-Platform-Engineer-Snowflake-GenAI/40087" target="_blank" rel="noreferrer">https://careers.jacobs.com/en_US/careers/JobDetail/Senior-AI-Data-Platform-Engineer-Snowflake-GenAI/40087</a></li><li><a href="https://www.snowflake.com/en/blog/engineering/well-architected-framework" target="_blank" rel="noreferrer">https://www.snowflake.com/en/blog/engineering/well-architected-framework</a></li><li><a href="https://salesmotion.io/company-intelligence/snowflake" target="_blank" rel="noreferrer">https://salesmotion.io/company-intelligence/snowflake</a></li><li><a href="https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970" target="_blank" rel="noreferrer">https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970</a></li><li><a href="https://www.cdomagazine.tech/leadership-moves/snowflake-appoints-anahita-tafvizi-as-chief-data-analytics-officer" target="_blank" rel="noreferrer">https://www.cdomagazine.tech/leadership-moves/snowflake-appoints-anahita-tafvizi-as-chief-data-analytics-officer</a></li></ol></section>
+
+    <section class="panel" style="margin-top:22px">
+      <p class="eyebrow">Machine Readable</p>
+      <h2>Raw Decision Event Payload</h2>
+      <pre>[
+  {
+    &quot;event_time&quot;: &quot;2026-06-03T23:07:50.590223+00:00&quot;,
+    &quot;account&quot;: &quot;Snowflake&quot;,
+    &quot;agent&quot;: &quot;research_agent&quot;,
+    &quot;decision_type&quot;: &quot;agent_analysis&quot;,
+    &quot;decision&quot;: &quot;Snowflake is actively enhancing its product offerings and strategic partnerships, particularly in the AI and data management sectors, while also focusing on financial performance and innovation.&quot;,
+    &quot;confidence&quot;: 0.8,
+    &quot;finding_count&quot;: 4,
+    &quot;run_mode&quot;: &quot;live&quot;,
+    &quot;agent_mode&quot;: &quot;live_llm&quot;,
+    &quot;llm_provider&quot;: &quot;openai&quot;,
+    &quot;metadata_only&quot;: true
+  },
+  {
+    &quot;event_time&quot;: &quot;2026-06-03T23:07:50.590223+00:00&quot;,
+    &quot;account&quot;: &quot;Snowflake&quot;,
+    &quot;agent&quot;: &quot;technology_agent&quot;,
+    &quot;decision_type&quot;: &quot;agent_analysis&quot;,
+    &quot;decision&quot;: &quot;Snowflake is actively evolving its platform to enhance AI capabilities and streamline data engineering processes, as evidenced by its architectural advancements and hiring patterns.&quot;,
+    &quot;confidence&quot;: 0.85,
+    &quot;finding_count&quot;: 4,
+    &quot;run_mode&quot;: &quot;live&quot;,
+    &quot;agent_mode&quot;: &quot;live_llm&quot;,
+    &quot;llm_provider&quot;: &quot;openai&quot;,
+    &quot;metadata_only&quot;: true
+  },
+  {
+    &quot;event_time&quot;: &quot;2026-06-03T23:07:50.590223+00:00&quot;,
+    &quot;account&quot;: &quot;Snowflake&quot;,
+    &quot;agent&quot;: &quot;organization_agent&quot;,
+    &quot;decision_type&quot;: &quot;agent_analysis&quot;,
+    &quot;decision&quot;: &quot;Snowflake is undergoing significant leadership changes and strategic shifts towards AI and machine learning, with a focus on expanding its workforce and product offerings in these areas.&quot;,
+    &quot;confidence&quot;: 0.8,
+    &quot;finding_count&quot;: 5,
+    &quot;run_mode&quot;: &quot;live&quot;,
+    &quot;agent_mode&quot;: &quot;live_llm&quot;,
+    &quot;llm_provider&quot;: &quot;openai&quot;,
+    &quot;metadata_only&quot;: true
+  },
+  {
+    &quot;event_time&quot;: &quot;2026-06-03T23:07:50.590223+00:00&quot;,
+    &quot;account&quot;: &quot;Snowflake&quot;,
+    &quot;agent&quot;: &quot;opportunity_agent&quot;,
+    &quot;decision_type&quot;: &quot;agent_analysis&quot;,
+    &quot;decision&quot;: &quot;Snowflake is strategically enhancing its product offerings and capabilities in AI and data management through acquisitions, leadership changes, and new product launches, while also focusing on financial performance.&quot;,
+    &quot;confidence&quot;: 0.85,
+    &quot;finding_count&quot;: 5,
+    &quot;run_mode&quot;: &quot;live&quot;,
+    &quot;agent_mode&quot;: &quot;live_llm&quot;,
+    &quot;llm_provider&quot;: &quot;openai&quot;,
+    &quot;metadata_only&quot;: true
+  }
+]</pre>
+    </section>
+    <p class="footer">Generated by Account Intelligence OS. This report is designed as a public-safe, metadata-first Digital Account Twin.</p>
+  </main>
+</body>
+</html>

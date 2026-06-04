@@ -1,0 +1,439 @@
+{
+  "account": "Snowflake",
+  "generated_at": "2026-06-03T23:07:50.590428+00:00",
+  "mode": "live",
+  "agents": [
+    {
+      "agent": "research_agent",
+      "summary": "Snowflake is actively enhancing its product offerings and strategic partnerships, particularly in the AI and data management sectors, while also focusing on financial performance and innovation.",
+      "findings": [
+        {
+          "signal_type": "Product Innovation",
+          "title": "Apache Iceberg Innovations",
+          "why_it_matters": "This innovation allows customers to accelerate their open lakehouse strategies, which is crucial for data access and analysis.",
+          "evidence": "Snowflake customers can now seamlessly accelerate their open lakehouse strategies, unlocking data access and analysis across open and managed environments.",
+          "source_urls": [
+            "https://www.snowflake.com/en/news/press-releases/snowflake-unveils-apache-iceberg-innovations"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "signal_type": "Acquisition",
+          "title": "Acquisition of AI Startup Natoma",
+          "why_it_matters": "Acquiring Natoma aligns with Snowflake's strategy to enhance its AI capabilities, which is a key growth area in the tech industry.",
+          "evidence": "Building on its AI strategy, Snowflake said it will buy AI startup Natoma.",
+          "source_urls": [
+            "https://www.cnbc.com/2026/05/28/snowflake-snow-software-stock-rally.html"
+          ],
+          "confidence": 0.8
+        },
+        {
+          "signal_type": "Product Launch",
+          "title": "Snowflake CoCo",
+          "why_it_matters": "Snowflake CoCo aims to redefine enterprise AI development, which could significantly impact how businesses innovate and utilize AI.",
+          "evidence": "Snowflake CoCo Redefines Enterprise AI Development as the Coding Agent Built for Faster, Easier, and More Powerful Innovation Anywhere.",
+          "source_urls": [
+            "https://www.snowflake.com/en/news/press-releases"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "signal_type": "Financial Performance",
+          "title": "Non-GAAP Financial Metrics",
+          "why_it_matters": "Understanding Snowflake's financial metrics is essential for assessing its profitability and operational efficiency.",
+          "evidence": "Non-GAAP R&D expense as a % of revenue 24 % ... Non-GAAP net income attributable to Snowflake Inc. as a % of revenue 11 % ...",
+          "source_urls": [
+            "https://s26.q4cdn.com/463892824/files/doc_financials/2026/q4/Q4-FY2026-Investor-Presentation_vF.pdf"
+          ],
+          "confidence": 0.75
+        }
+      ],
+      "confidence": 0.8,
+      "sources": [
+        {
+          "title": "Snowflake Inc. (SNOW) Latest Press Releases & Corporate News",
+          "url": "https://finance.yahoo.com/quote/SNOW/press-releases",
+          "snippet": "Snowflake is actively enhancing its ecosystem through partnerships and product innovations aimed at driving AI adoption and data management efficiencies.",
+          "query": "Snowflake company recent news strategy product announcement"
+        },
+        {
+          "title": "Snowflake Unveils Apache Iceberg\u2122 Innovations, Giving ...",
+          "url": "https://www.snowflake.com/en/news/press-releases/snowflake-unveils-apache-iceberg-innovations",
+          "snippet": "Snowflake customers can now seamlessly accelerate their open lakehouse strategies, unlocking data access and analysis across open and managed environments.",
+          "query": "Snowflake company recent news strategy product announcement"
+        },
+        {
+          "title": "Snowflake stock surges 36% on AI frenzy, fueling software rally",
+          "url": "https://www.cnbc.com/2026/05/28/snowflake-snow-software-stock-rally.html",
+          "snippet": "Building on its AI strategy, Snowflake said it will buy AI startup Natoma. The company did not disclose the financials of the deal. \"Through the",
+          "query": "Snowflake company recent news strategy product announcement"
+        },
+        {
+          "title": "Press Releases | Snowflake - The AI Data Cloud",
+          "url": "https://www.snowflake.com/en/news/press-releases",
+          "snippet": "Snowflake CoCo Redefines Enterprise AI Development as the Coding Agent Built for Faster, Easier, and More Powerful Innovation Anywhere. Jun 2, 2026.",
+          "query": "Snowflake company recent news strategy product announcement"
+        },
+        {
+          "title": "Snowflake Earnings Call Q3 2026 | $SNOW | WATCH LIVE - YouTube",
+          "url": "https://www.youtube.com/watch?v=Wjrl_0KA7-A",
+          "snippet": "Snowflake Q3 Earnings Call 2026 | $SNOW - ... Snowflake Earnings Call Q3 2026 | $SNOW | WATCH LIVE. 1.5K views",
+          "query": "Snowflake earnings call investor presentation strategic priorities"
+        },
+        {
+          "title": "Snowflake Investor Presentation Deck | Slidebook.io",
+          "url": "https://www.slidebook.io/company/snowflake/presentation/69d4b7ad2768d4657fdc21396dbc9926/slide/0f6a4fff-3879-4003-9b69-da8da83bb64c",
+          "snippet": "Snowflake - Investor Presentation Deck. Instantly search thousands of Decks by world-leading companies on Slidebook.io.",
+          "query": "Snowflake earnings call investor presentation strategic priorities"
+        },
+        {
+          "title": "[PDF] SNOWFLAKE INVESTOR PRESENTATION",
+          "url": "https://s26.q4cdn.com/463892824/files/doc_financials/2026/q4/Q4-FY2026-Investor-Presentation_vF.pdf",
+          "snippet": "Non-GAAP R&D expense as a % of revenue 24 % 23 % 22 % 21 % 21 % 22 % 24 % 21 %\u00a9 2026 Snowflake Inc. All Rights Reserved. Non-GAAP operating income as a % of revenue 9 % 9 % 11 % 11 % 11 % 8 % 6 % 10 %\u00a9 2026 Snowflake Inc. All Rights Reserved. Non-GAAP net income attributable to Snowflake Inc. as a % of revenue 11 % 8 % 11 % 11 % 9 % 13 % 8 % 10 %\u00a9 2026 Snowflake Inc. All Rights Reserved. 1.  For the periods in which we had non -GAAP net income, the non -GAAP weighted -average shares used in computing non -GAAP net income per share attributable to Snowflake Inc. common stockholders \u2014diluted included (a) the effect. Non-GAAP weighted-average shares used in computing non-GAAP net income per share attributable to Snowflake Inc. common stockholders\u2014diluted 1 370,683 370,920 372,383 373,353 373,988 362,064 363,374 372,323 \u00a9 2026 Snowflake Inc. All Rights Reserved.",
+          "query": "Snowflake earnings call investor presentation strategic priorities"
+        },
+        {
+          "title": "Events & Presentations - Snowflake - Investor Relations",
+          "url": "https://investors.snowflake.com/events-and-presentations/default.aspx",
+          "snippet": "[Skip to main content](https://investors.snowflake.com/events-and-presentations/default.aspx#maincontent). *   [Why Snowflake](https://investors.snowflake.com/events-and-presentations/default.aspx#). *   [Why Snowflake](https://www.snowflake.com/en/why-snowflake/). *   [Partners](https://www.snowflake.com/partners/). *   [The Data Cloud](https://investors.snowflake.com/events-and-presentations/default.aspx#). *   [Platform](https://www.snowflake.com/en/data-cloud/platform/). *   [Solutions](https://investors.snowflake.com/events-and-presentations/default.aspx#). *   [Financial Services](https://www.snowflake.com/en/solutions/industries/financial-services/). *   [IT](https://www.snowflake.com/snowflake-for-it/). *   [Resources](https://investors.snowflake.com/events-and-presentations/default.aspx#). *   [Events](https://www.snowflake.com/about/events/). *   [Webinars](https://www.snowflake.com/about/webinars/). *   [Support](https://www.snowflake.com/support/). *   [Company](https://investors.snowflake.com/events-and-presentations/default.aspx#). *   [About Snowflake](https://www.snowflake.com/company/). *   [Deutsch](https://www.snowflake.com/?lang=de). *   [Why Snowflake](https://",
+          "query": "Snowflake earnings call investor presentation strategic priorities"
+        }
+      ],
+      "mode": "live_llm"
+    },
+    {
+      "agent": "technology_agent",
+      "summary": "Snowflake is actively evolving its platform to enhance AI capabilities and streamline data engineering processes, as evidenced by its architectural advancements and hiring patterns.",
+      "findings": [
+        {
+          "signal_type": "Technology Adoption",
+          "title": "Evolution to AI Data Cloud",
+          "why_it_matters": "Snowflake's transition to an AI Data Cloud indicates a strategic focus on integrating AI and machine learning capabilities into its core offerings, which can enhance data analytics and operational efficiency for enterprises.",
+          "evidence": "Snowflake has evolved from basic data warehousing to a comprehensive AI Data Cloud, integrating data sharing, machine learning, and real-time analytics.",
+          "source_urls": [
+            "https://www.infometry.net/blog/snowflake/snowflakes-evolution-into-a-ai-native-data-cloud"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "signal_type": "Product Development",
+          "title": "Introduction of Snowflake CoCo and Datastream",
+          "why_it_matters": "The introduction of Snowflake CoCo and Datastream reflects a commitment to simplifying data engineering processes and enhancing real-time data handling, crucial for AI applications.",
+          "evidence": "Snowflake is strengthening its platform with CoCo to guide complex setups and Datastream, a native streaming service compatible with Apache Kafka.",
+          "source_urls": [
+            "https://www.snowflake.com/en/blog/data-development-simple-as-prompt"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "signal_type": "Hiring Patterns",
+          "title": "Focus on AI and Data Platform Engineering Roles",
+          "why_it_matters": "The hiring of Senior AI/Data Platform Engineers indicates a strategic push towards enhancing AI capabilities within Snowflake's platform, aligning with industry trends in AI integration.",
+          "evidence": "Snowflake is seeking experienced Senior AI / Data Platform Engineers to build and operate data platforms that enable GenAI.",
+          "source_urls": [
+            "https://careers.jacobs.com/en_US/careers/JobDetail/Senior-AI-Data-Platform-Engineer-Snowflake-GenAI/40087"
+          ],
+          "confidence": 0.8
+        },
+        {
+          "signal_type": "Architectural Framework",
+          "title": "Snowflake Well-Architected Framework",
+          "why_it_matters": "The introduction of a Well-Architected Framework for data platforms signifies Snowflake's commitment to ensuring security, reliability, and performance, which are critical for enterprise adoption.",
+          "evidence": "The Snowflake Well-Architected Framework unites security controls, reliability, performance, operations, and financial efficiency under a single architecture.",
+          "source_urls": [
+            "https://www.snowflake.com/en/blog/engineering/well-architected-framework"
+          ],
+          "confidence": 0.75
+        }
+      ],
+      "confidence": 0.85,
+      "sources": [
+        {
+          "title": "Data Architecture to Enable AI Apps, Lakehouse Analytics and More",
+          "url": "https://www.snowflake.com/en/blog/engineering/snowflake-s-data-architecture--enabling-ai-apps--next-gen-lakeho",
+          "snippet": "In a previous blog post, we described the challenges of building the Snowflake AI Data Cloud and the key design elements in Snowflake\u2019s architecture that address them. In this post, we take a closer look at how Snowflake builds a cloud for all data: structured, semistructured and unstructured data; domain- and application-specific data; and data used in different types of workloads, such as AI applications, analytics and business intelligence, transactional processing, streaming and data engineering. The Snowflake data and metadata model, data storage, as well as data governance are the building blocks in the Snowflake architecture that enable this. A key design element of the Snowflake architecture is the decoupling of the data layout from the table metadata and format, as well as the in-memory representation of the data used in the data flow engine. The hybrid search works seamlessly on Snowflake native storage through uniform support of the storage and the query engine to represent and process unstructured data representation as well as embeddings.",
+          "query": "Snowflake engineering blog AI data platform architecture"
+        },
+        {
+          "title": "Snowflake: From Cloud Data Warehouse to AI-Native Cloud",
+          "url": "https://www.infometry.net/blog/snowflake/snowflakes-evolution-into-a-ai-native-data-cloud",
+          "snippet": "Infometry Inc logo with the tagline Enabling AI for Every Enterprise. infometry-inc-logo-Stick-Header-enabling-ai-for-every-enterprise. Infometry-Mobile-Logo-With-Tagline-Enabling-AI-for-every-Enterprise. # Snowflake\u2019s Evolution into a AI-Native Data Cloud. Implementing INFOFISCUS Conversa for enterprise conversational analytics using Snowflake AI and Snowflake Cortex. Founded in 2012, Snowflake is a cloud-native data platform designed to overcome the shortcomings of earlier cloud and on-premises solutions. It has evolved from basic data warehousing and data lakes to a comprehensive AI Data Cloud\u2014a multi-cloud platform that encompasses data sharing, machine learning, and real-time analytics. Diagram of Snowflake Cloud Data Platform architecture showing cloud services layer, query processing layer with virtual warehouses, data storage across AWS Azure and Google Cloud, and integration with BI tools and client applications. Snowflake responded by evolving its core platform into what it now calls the **AI Data Cloud** \u2014 a unified environment where data engineering, analytics, machine learning (ML), and artificial intelligence (AI) are integrated.",
+          "query": "Snowflake engineering blog AI data platform architecture"
+        },
+        {
+          "title": "Introducing the Snowflake Well-Architected Framework",
+          "url": "https://www.snowflake.com/en/blog/engineering/well-architected-framework",
+          "snippet": "# Designed for Excellence: Introducing the Snowflake Well-Architected Framework. As data platforms evolve into enterprise-critical ecosystems, organizations are under pressure to move faster, secure more and spend less \u2014 all without sacrificing trust or performance. While the industry has long adopted \u201cwell-architected\u201d frameworks for cloud infrastructure, data platforms have often lacked a comparable blueprint that unites **security controls, reliability, performance, operations and financial efficiency** under a single platform architecture. Together, these pillars form a continuous improvement model for customers building on the Snowflake AI Data Cloud \u2014 a framework not just to deploy correctly but to evolve intelligently. ### Built for the Snowflake platform. The Snowflake WAF is a design language for excellence in the Data Cloud \u2014 helping to transform best practices into built-in capabilities. ## The five pillars of the Snowflake Well-Architected Framework. Security and governance controls form the foundation of every Snowflake Well-Architected design. They help customers ensure data remains protected, private and compliant across every layer of the platform, from encryption t",
+          "query": "Snowflake engineering blog AI data platform architecture"
+        },
+        {
+          "title": "Simplify the Entire Data Development Lifecycle - Snowflake",
+          "url": "https://www.snowflake.com/en/blog/data-development-simple-as-prompt",
+          "snippet": "###### At Snowflake. By the time most enterprise data reaches the systems that are meant to act on it, it's often stale. The demand on data engineering teams has shifted toward real-time pipelines and event-driven architectures as more organizations push agentic AI into production \u2014 highlighting the need to connect and govern more sources even as they undergo constant change. At Summit 2026, Snowflake is strengthening the platform to help data engineering teams succeed in the AI era. These improvements reduce the time data engineers spend on infrastructure management and manual orchestration, enabling them to spend less time on plumbing and more time on the outcomes that AI makes possible with **Snowflake CoCo** serving as the common thread that turns complex setup into a guided conversation. **Datastream** (private preview soon) is Snowflake's native, Apache Kafka-compatible streaming service that is designed to collapse that operational overhead into a single governed platform.",
+          "query": "Snowflake engineering blog AI data platform architecture"
+        },
+        {
+          "title": "Senior AI/Data Platform Engineer (Snowflake, GenAI) - Jacobs",
+          "url": "https://careers.jacobs.com/en_US/careers/JobDetail/Senior-AI-Data-Platform-Engineer-Snowflake-GenAI/40087",
+          "snippet": "We are seeking an experienced Senior AI / Data Platform Engineer to play a key role in building and operating Snowflake based data platforms that enable GenAI",
+          "query": "Snowflake jobs AI data engineering platform technologies"
+        },
+        {
+          "title": "AI & ML Engineering - Snowflake Careers",
+          "url": "https://careers.snowflake.com/us/en/ai-ml-engineering",
+          "snippet": "# AI ENGINEERING. Snowflake drives data forward \u2014 and we\u2019re the engine room of innovation behind it. We make enterprise AI smarter by design, turning raw data into real insights and models into measurable value \u2014 from AI research and infrastructure to agents and apps. Through our work, we create easy, efficient, trusted AI features that advance our platform, inspire innovation, and expand what\u2019s possible in enterprise AI \u2014 at Snowflake and beyond. We don't just experiment with cutting-edge technology \u2014 we ship it, transforming how enterprise customers work with their data and unlock new value from AI. As the backbone of Snowflake\u2019s platform, we create state-of-the-art systems that scale, power personalized language, and make multi-modal models possible for customers here, there, and everywhere. With a combination of ML infrastructure and agentic AI, we deliver the tools, runtimes, and capabilities to help users get the most out of their models \u2014 and their business.",
+          "query": "Snowflake jobs AI data engineering platform technologies"
+        },
+        {
+          "title": "Snowflake Platform Engineer, AI & Data Platforms (AiDP) - Jobs",
+          "url": "https://jobs.apple.com/en-us/details/200641549-0157/snowflake-platform-engineer-ai-data-platforms-aidp?team=CORSV",
+          "snippet": "Apple is an equal opportunity employer that is committed to inclusion and diversity. Learn more about your EEO rights as an applicant (Opens in a new window) . Apple will not discriminate or retaliate against applicants who inquire about, disclose, or discuss their compensation. Apple participates in the E-Verify program in certain locations as required by law. Learn more about the E-Verify program. Apple is committed to working with and providing reasonable accommodation to applicants with physical and mental disabilities. Reasonable Accommodation and Drug Free Workplace policyLearn more (Opens in a new window) . Apple is a drug-free workplace. Apple will consider for employment all qualified applicants with criminal histories in a manner consistent with applicable law. If you\u2019re applying for a position in San Francisco, review the  San Francisco Fair Chance Ordinance guidelines (opens in a new window)  applicable in your area. It is unlawful in Massachusetts to require or administer a lie detector test as a condition of employment or continued employment.",
+          "query": "Snowflake jobs AI data engineering platform technologies"
+        },
+        {
+          "title": "Snowflake Generative Ai Jobs (NOW HIRING) - ZipRecruiter",
+          "url": "https://www.ziprecruiter.com/Jobs/Snowflake-Generative-Ai",
+          "snippet": "Browse 1000+ SNOWFLAKE GENERATIVE AI jobs ($59-$60/hr) from companies with openings that are hiring now. Find job postings near you and",
+          "query": "Snowflake jobs AI data engineering platform technologies"
+        }
+      ],
+      "mode": "live_llm"
+    },
+    {
+      "agent": "organization_agent",
+      "summary": "Snowflake is undergoing significant leadership changes and strategic shifts towards AI and machine learning, with a focus on expanding its workforce and product offerings in these areas.",
+      "findings": [
+        {
+          "signal_type": "Leadership Change",
+          "title": "Sridhar Ramaswamy Becomes CEO",
+          "why_it_matters": "The transition to a new CEO often indicates a shift in company strategy and priorities.",
+          "evidence": "Sridhar Ramaswamy replaced Frank Slootman as CEO in February 2024, marking a strategic shift toward AI and developer-focused use cases.",
+          "source_urls": [
+            "https://salesmotion.io/company-intelligence/snowflake",
+            "https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "signal_type": "Hiring Growth",
+          "title": "Expansion of AI/ML Teams",
+          "why_it_matters": "Hiring in AI/ML roles indicates a commitment to enhancing capabilities in these critical areas, which can drive future growth.",
+          "evidence": "Snowflake is selectively growing headcount with a focus on AI/ML engineering and enterprise sales roles following the CEO transition.",
+          "source_urls": [
+            "https://salesmotion.io/company-intelligence/snowflake"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "signal_type": "Product Development",
+          "title": "Launch of Cortex AI Initiative",
+          "why_it_matters": "The Cortex AI initiative represents a significant investment in making AI accessible within Snowflake's platform, which could enhance its competitive edge.",
+          "evidence": "Ramaswamy led the launch of Cortex, which is expected to be generally available by June 2024.",
+          "source_urls": [
+            "https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970"
+          ],
+          "confidence": 0.8
+        },
+        {
+          "signal_type": "New Executive Appointment",
+          "title": "Anahita Tafvizi Appointed Chief Data Analytics Officer",
+          "why_it_matters": "This appointment highlights Snowflake's focus on strengthening its data analytics capabilities, which is crucial for its AI strategy.",
+          "evidence": "Anahita Tafvizi has been appointed as Chief Data Analytics Officer, expressing excitement about collaborating with Snowflake\u2019s leadership team.",
+          "source_urls": [
+            "https://www.cdomagazine.tech/leadership-moves/snowflake-appoints-anahita-tafvizi-as-chief-data-analytics-officer"
+          ],
+          "confidence": 0.75
+        },
+        {
+          "signal_type": "Strategic Focus",
+          "title": "AI/ML Container Services and Document AI Solutions",
+          "why_it_matters": "The introduction of new AI/ML services indicates Snowflake's commitment to enhancing its product offerings in response to market demands.",
+          "evidence": "Snowflake's AI/ML container services are currently in AWS public preview and are due for full release in June, alongside the Document AI solution.",
+          "source_urls": [
+            "https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970"
+          ],
+          "confidence": 0.7
+        }
+      ],
+      "confidence": 0.8,
+      "sources": [
+        {
+          "title": "Snowflake Company Intelligence \u2014 Revenue, Leadership & Signals",
+          "url": "https://salesmotion.io/company-intelligence/snowflake",
+          "snippet": "Snowflake is a cloud-based data platform that enables data warehousing, data lakes, data engineering, data science, and data application development. Sridhar Ramaswamy continued reshaping product strategy after replacing Frank Slootman as CEO in February 2024, with increased focus on AI/ML workloads. Expanded AI research and engineering teams, with a focus on hiring ML engineers and AI product managers to accelerate Cortex development. Snowflake is a high-growth cloud data company with a consumption-based revenue model, meaning its internal technology spending scales directly with platform usage. The company's fiscal year ends January 31, so Q4 budget cycles run from November through January. The CEO transition from Frank Slootman to Sridhar Ramaswamy in early 2024 marked a strategic shift toward AI and developer-focused use cases. Snowflake's Cortex AI initiative means the company is investing heavily in making AI accessible within its platform, opening doors for complementary technology partners. The company has been selectively growing headcount with a focus on AI/ML engineering and enterprise sales roles following the CEO transition in early 2024.",
+          "query": "Snowflake executive leadership changes hiring growth AI data"
+        },
+        {
+          "title": "Snowflake details next stage of AI data strategy as new ...",
+          "url": "https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970",
+          "snippet": "# Snowflake details next stage of AI data strategy as new CEO takes the helm. The retirement of Snowflake\u2019s CEO and ascendance of its SVP of AI punctuates an AI-fueled data boom for the company. \u201cWith the onslaught of generative AI, Snowflake needs a hard-driving technologist to navigate the challenges the new world represents,\u201d Slootman said during the company\u2019s Q4 2024 earnings call Wednesday. Ramaswamy led the launch of Cortex, which the company expects to make generally available in time for its Data Cloud Summit in June. Snowflake\u2019s AI/ML container services, currently in AWS public preview, is also due for full release in June, along with the Document AI natural language data extraction solution and an AI-enabled SQL copilot tool, EVP of Product Christian Kleinerman confirmed during the call. \u201cThe big unlock is being able to get at the structured data that is in Snowflake and have that be accessed by many, many more people,\u201d said Ramaswamy.",
+          "query": "Snowflake executive leadership changes hiring growth AI data"
+        },
+        {
+          "title": "Get to Know Snowflake's Leadership Team | Snowflake",
+          "url": "https://www.snowflake.com/en/company/overview/leadership-and-board",
+          "snippet": "The future of AI, revealed live. # Snowflake Leadership. The Snowflake executive team represents centuries of technology, product and business experience to create and advance the only cloud data platform built to enable the data-driven enterprise. ## GET TO KNOW THE TEAM. #### Mike Blandina. Chief Security and Trust Officer, Snowflake. General Manager - Observability Business Unit. #### Mike Speiser. #### Mark Garrett. #### Mark McLaughlin. ## Learn MoreAbout Snowflake. Find out about Snowflake\u2019s latest business and technology achievements by catching up any of our press releases and industry news articles that feature Snowflake. Get first-hand insights about our latest product features, technology partnerships, and recommendations on how to get the highest value from your data. Learn how thousands of organizations around the globe and across dozens of industries are using Snowflake\u2019s Data Cloud to advance their businesses. **Subscribe to our monthly newsletter**. Stay up to date on Snowflake\u2019s latest products, expert insights and resources\u2014right in your inbox!",
+          "query": "Snowflake executive leadership changes hiring growth AI data"
+        },
+        {
+          "title": "EP 121: Snowflake CEO Sridhar \u2026\u2013The Logan Bartlett Show \u2013 Apple\u00a0Podcasts",
+          "url": "https://podcasts.apple.com/ca/podcast/ep-121-snowflake-ceo-sridhar-ramaswamy-on-the-future/id1606770839?i=1000675322348",
+          "snippet": "# EP 121: Snowflake CEO Sridhar Ramaswamy on the Future of AI and Data. Nine months into his role as Snowflake\u2019s CEO, Sridhar Ramaswamy sat down for a candid discussion on the journey so far & what\u2019s ahead. He uncovered details about his transition to Snowflake CEO, the operational changes he\u2019s put in place to accelerate product development, and his bold predictions for AI\u2019s future\u2014along with how he\u2019s guiding a vision for Snowflake to fit into that landscape. Sridhar also reflects on how his leadership has evolved, from leading a major Google unit to founding Neeva (acquired by Salesforce) and now running Snowflake. [0:56] Sridhar\u2019s Journey to Snowflake. [3:37] Snowflake's AI Vision and Cortex AI. [10:35] Innovative Uses of AI at Snowflake. [15:49] Challenges and Future of AI in Business. [21:27] Snowflake's Long-Term AI Aspirations. [25:04] Predictable and Unpredictable Aspects of AI. [31:21] The Evolution of AI Models. **Check out Unsupervised Learning,** Redpoint's AI Podcast: https://www.youtube.com/@UCUl-s\\_Vp-Kkk\\_XVyDylNwLA.",
+          "query": "Snowflake executive leadership changes hiring growth AI data"
+        },
+        {
+          "title": "Snowflake Appoints Anahita Tafvizi as Chief Data Analytics Officer",
+          "url": "https://www.cdomagazine.tech/leadership-moves/snowflake-appoints-anahita-tafvizi-as-chief-data-analytics-officer",
+          "snippet": "The State of AI Reliability: Why Trust Is Becoming the Biggest Barrier to Scaling AI AI adoption is accelerating across the enterprise, but reliability is lagging. In a new research report, The State of AI Reliability: Perspectives fro... CDO Magazine Announces the Top 30 Healthcare Innovators 2026 Across healthcare, AI has moved from experimentation to enterprise execution. CDO Magazine recognizes the Top 30 Healthcare Innovators 2026 who are tu... In a new research report, The State of AI Reliability: Perspectives from Data & AI Leaders, CDO Magazine, in partnership... CDO Magazine recognizes the Top 30 Healthcare Innovators 2026 who are turning that shift into measurable impact. # Snowflake Appoints Anahita Tafvizi as Chief Data Analytics Officer. Anahita Tafvizi, Snowflake Chief Data Analytics Officer. (US and Canada) Snowflake appoints Anahita Tafvizi as Chief Data Analytics Officer. Tafvizi expressed excitement about collaborating with Snowflake\u2019s leadership team as well as the company\u2019s data and analytics teams.",
+          "query": "Snowflake new chief data officer CTO CIO AI leadership"
+        },
+        {
+          "title": "Why Snowflake's CIO Rebranded IT for the AI Era - Metis Strategy",
+          "url": "https://www.metisstrategy.com/interview/mike-blandina",
+          "snippet": "Mike Blandina is the Chief Information Officer of Snowflake, where he leads internal technology strategy and execution across the $3.6B data",
+          "query": "Snowflake new chief data officer CTO CIO AI leadership"
+        },
+        {
+          "title": "Data and AI Leadership Forum - Snowflake",
+          "url": "https://www.snowflake.com/en/lp/data-and-ai-leadership-forum",
+          "snippet": "#### Unlocking the Value of Data and AI for Enterprise Business Leaders. See real-world examples of how organizations are leveraging data and AI to deliver business value in product development, operations, business intelligence and more. Executives and product leaders seeking practical insights on how to embark on their data and AI journey to accelerate business-critical use cases. * Join this fireside chat with Anahita Tafvizi, Chief Data Analytics Officer at Snowflake and Sinclair Schuller, Americas Responsible AI Leader at EY to learn about the role of data and AI in accelerating critical business use cases across the enterprise, considerations for your data architecture to support self-service data consumption and best practices for leveraging agentic products and LLMs for data and insights discovery. This session with Baris Gultekin, VP Product Management at Snowflake and Amit Bansal, Global Data Business Lead at Accenture cuts through the complexity to provide practical recommendations for identifying the right use cases, building a foundation of trust, and implementing AI solutions that drive measurable and responsible value.",
+          "query": "Snowflake new chief data officer CTO CIO AI leadership"
+        }
+      ],
+      "mode": "live_llm"
+    },
+    {
+      "agent": "opportunity_agent",
+      "summary": "Snowflake is strategically enhancing its product offerings and capabilities in AI and data management through acquisitions, leadership changes, and new product launches, while also focusing on financial performance.",
+      "findings": [
+        {
+          "signal_type": "Product Innovation",
+          "title": "Apache Iceberg Innovations",
+          "why_it_matters": "This innovation allows customers to accelerate their open lakehouse strategies, which is crucial for data access and analysis.",
+          "evidence": "Snowflake customers can now seamlessly accelerate their open lakehouse strategies, unlocking data access and analysis across open and managed environments.",
+          "source_urls": [
+            "https://www.snowflake.com/en/news/press-releases/snowflake-unveils-apache-iceberg-innovations"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "signal_type": "Acquisition",
+          "title": "Acquisition of AI Startup Natoma",
+          "why_it_matters": "Acquiring Natoma aligns with Snowflake's strategy to enhance its AI capabilities, which is a key growth area in the tech industry.",
+          "evidence": "Building on its AI strategy, Snowflake said it will buy AI startup Natoma.",
+          "source_urls": [
+            "https://www.cnbc.com/2026/05/28/snowflake-snow-software-stock-rally.html"
+          ],
+          "confidence": 0.8
+        },
+        {
+          "signal_type": "Leadership Change",
+          "title": "Sridhar Ramaswamy Becomes CEO",
+          "why_it_matters": "The transition to a new CEO often indicates a shift in company strategy and priorities.",
+          "evidence": "Sridhar Ramaswamy replaced Frank Slootman as CEO in February 2024, marking a strategic shift toward AI and developer-focused use cases.",
+          "source_urls": [
+            "https://salesmotion.io/company-intelligence/snowflake",
+            "https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970"
+          ],
+          "confidence": 0.9
+        },
+        {
+          "signal_type": "Product Development",
+          "title": "Launch of Cortex AI Initiative",
+          "why_it_matters": "The Cortex AI initiative represents a significant investment in making AI accessible within Snowflake's platform, which could enhance its competitive edge.",
+          "evidence": "Ramaswamy led the launch of Cortex, which is expected to be generally available by June 2024.",
+          "source_urls": [
+            "https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970"
+          ],
+          "confidence": 0.8
+        },
+        {
+          "signal_type": "Hiring Patterns",
+          "title": "Focus on AI and Data Platform Engineering Roles",
+          "why_it_matters": "The hiring of Senior AI/Data Platform Engineers indicates a strategic push towards enhancing AI capabilities within Snowflake's platform, aligning with industry trends in AI integration.",
+          "evidence": "Snowflake is seeking experienced Senior AI / Data Platform Engineers to build and operate data platforms that enable GenAI.",
+          "source_urls": [
+            "https://careers.jacobs.com/en_US/careers/JobDetail/Senior-AI-Data-Platform-Engineer-Snowflake-GenAI/40087"
+          ],
+          "confidence": 0.8
+        }
+      ],
+      "confidence": 0.85,
+      "sources": [
+        {
+          "title": "research_agent findings",
+          "url": "internal://agent-output",
+          "snippet": "{\n  \"summary\": \"Snowflake is actively enhancing its product offerings and strategic partnerships, particularly in the AI and data management sectors, while also focusing on financial performance and innovation.\",\n  \"findings\": [\n    {\n      \"signal_type\": \"Product Innovation\",\n      \"title\": \"Apache Iceberg Innovations\",\n      \"why_it_matters\": \"This innovation allows customers to accelerate their open lakehouse strategies, which is crucial for data access and analysis.\",\n      \"evidence\": \"Snowflake customers can now seamlessly accelerate their open lakehouse strategies, unlocking data access and analysis across open and managed environments.\",\n      \"source_urls\": [\n        \"https://www.snowflake.com/en/news/press-releases/snowflake-unveils-apache-iceberg-innovations\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"signal_type\": \"Acquisition\",\n      \"title\": \"Acquisition of AI Startup Natoma\",\n      \"why_it_matters\": \"Acquiring Natoma aligns with Snowflake's strategy to enhance its AI capabilities, which is a key growth area in the tech industry.\",\n      \"evidence\": \"Building on its AI strategy, Snowflake said it will buy AI startup Natoma.\",\n      \"source_urls\": [\n        \"https://www.cnbc.com/2026/05/28/snowflake-snow-software-stock-rally.html\"\n      ],\n      \"confidence\": 0.8\n    },\n    {\n      \"signal_type\": \"Product Launch\",\n      \"title\": \"Snowflake CoCo\",\n      \"why_it_matters\": \"Snowflake CoCo aims to redefine enterprise AI development, which could significantly impact how businesses innovate and utilize AI.\",\n      \"evidence\": \"Snowflake CoCo Redefines Enterprise AI Development as the Coding Agent Built for Faster, Easier, and More Powerful Innovation Anywhere.\",\n      \"source_urls\": [\n        \"https://www.snowflake.com/en/news/press-releases\"\n      ],\n      \"confidence\": 0.85\n    },\n    {\n      \"signal_type\": \"Financial Performance\",\n      \"title\": \"Non-GAAP Financial Metrics\",\n      \"why_it_matters\": \"Understanding Snowflake's financial metrics is essential for assessing its profitability and operational efficiency.\",\n      \"evidence\": \"Non-GAAP R&D expense as a % of revenue 24 % ... Non-GAAP net income attributable to Snowflake Inc. as a % of revenue 11 % ...\",\n      \"source_urls\": [\n        \"https://s26.q4cdn.com/463892824/files/doc_financials/2026/q4/Q4-FY2026-Investor-Presentation_vF.pdf\"\n      ],\n      \"confidence\": 0.75\n    }\n  ]\n}",
+          "query": "agent synthesis"
+        },
+        {
+          "title": "technology_agent findings",
+          "url": "internal://agent-output",
+          "snippet": "{\n  \"summary\": \"Snowflake is actively evolving its platform to enhance AI capabilities and streamline data engineering processes, as evidenced by its architectural advancements and hiring patterns.\",\n  \"findings\": [\n    {\n      \"signal_type\": \"Technology Adoption\",\n      \"title\": \"Evolution to AI Data Cloud\",\n      \"why_it_matters\": \"Snowflake's transition to an AI Data Cloud indicates a strategic focus on integrating AI and machine learning capabilities into its core offerings, which can enhance data analytics and operational efficiency for enterprises.\",\n      \"evidence\": \"Snowflake has evolved from basic data warehousing to a comprehensive AI Data Cloud, integrating data sharing, machine learning, and real-time analytics.\",\n      \"source_urls\": [\n        \"https://www.infometry.net/blog/snowflake/snowflakes-evolution-into-a-ai-native-data-cloud\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"signal_type\": \"Product Development\",\n      \"title\": \"Introduction of Snowflake CoCo and Datastream\",\n      \"why_it_matters\": \"The introduction of Snowflake CoCo and Datastream reflects a commitment to simplifying data engineering processes and enhancing real-time data handling, crucial for AI applications.\",\n      \"evidence\": \"Snowflake is strengthening its platform with CoCo to guide complex setups and Datastream, a native streaming service compatible with Apache Kafka.\",\n      \"source_urls\": [\n        \"https://www.snowflake.com/en/blog/data-development-simple-as-prompt\"\n      ],\n      \"confidence\": 0.85\n    },\n    {\n      \"signal_type\": \"Hiring Patterns\",\n      \"title\": \"Focus on AI and Data Platform Engineering Roles\",\n      \"why_it_matters\": \"The hiring of Senior AI/Data Platform Engineers indicates a strategic push towards enhancing AI capabilities within Snowflake's platform, aligning with industry trends in AI integration.\",\n      \"evidence\": \"Snowflake is seeking experienced Senior AI / Data Platform Engineers to build and operate data platforms that enable GenAI.\",\n      \"source_urls\": [\n        \"https://careers.jacobs.com/en_US/careers/JobDetail/Senior-AI-Data-Platform-Engineer-Snowflake-GenAI/40087\"\n      ],\n      \"confidence\": 0.8\n    },\n    {\n      \"signal_type\": \"Architectural Framework\",\n      \"title\": \"Snowflake Well-Architected Framework\",\n      \"why_it_matters\": \"The introduction of a Well-Architected Framework for data platforms signifies Snowflake's commitment to ensuring security, reliability, and performance, which are critical for enterprise adoption.\",\n      \"evidence\": \"The Snowflake Well-Architected Framework unites security controls, reliability, performance, operations, and financial efficiency under a single architecture.\",\n      \"source_urls\": [\n        \"https://www.snowflake.com/en/blog/engineering/well-architected-framework\"\n      ],\n      \"confidence\": 0.75\n    }\n  ]\n}",
+          "query": "agent synthesis"
+        },
+        {
+          "title": "organization_agent findings",
+          "url": "internal://agent-output",
+          "snippet": "{\n  \"summary\": \"Snowflake is undergoing significant leadership changes and strategic shifts towards AI and machine learning, with a focus on expanding its workforce and product offerings in these areas.\",\n  \"findings\": [\n    {\n      \"signal_type\": \"Leadership Change\",\n      \"title\": \"Sridhar Ramaswamy Becomes CEO\",\n      \"why_it_matters\": \"The transition to a new CEO often indicates a shift in company strategy and priorities.\",\n      \"evidence\": \"Sridhar Ramaswamy replaced Frank Slootman as CEO in February 2024, marking a strategic shift toward AI and developer-focused use cases.\",\n      \"source_urls\": [\n        \"https://salesmotion.io/company-intelligence/snowflake\",\n        \"https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"signal_type\": \"Hiring Growth\",\n      \"title\": \"Expansion of AI/ML Teams\",\n      \"why_it_matters\": \"Hiring in AI/ML roles indicates a commitment to enhancing capabilities in these critical areas, which can drive future growth.\",\n      \"evidence\": \"Snowflake is selectively growing headcount with a focus on AI/ML engineering and enterprise sales roles following the CEO transition.\",\n      \"source_urls\": [\n        \"https://salesmotion.io/company-intelligence/snowflake\"\n      ],\n      \"confidence\": 0.85\n    },\n    {\n      \"signal_type\": \"Product Development\",\n      \"title\": \"Launch of Cortex AI Initiative\",\n      \"why_it_matters\": \"The Cortex AI initiative represents a significant investment in making AI accessible within Snowflake's platform, which could enhance its competitive edge.\",\n      \"evidence\": \"Ramaswamy led the launch of Cortex, which is expected to be generally available by June 2024.\",\n      \"source_urls\": [\n        \"https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970\"\n      ],\n      \"confidence\": 0.8\n    },\n    {\n      \"signal_type\": \"New Executive Appointment\",\n      \"title\": \"Anahita Tafvizi Appointed Chief Data Analytics Officer\",\n      \"why_it_matters\": \"This appointment highlights Snowflake's focus on strengthening its data analytics capabilities, which is crucial for its AI strategy.\",\n      \"evidence\": \"Anahita Tafvizi has been appointed as Chief Data Analytics Officer, expressing excitement about collaborating with Snowflake\\u2019s leadership team.\",\n      \"source_urls\": [\n        \"https://www.cdomagazine.tech/leadership-moves/snowflake-appoints-anahita-tafvizi-as-chief-data-analytics-officer\"\n      ],\n      \"confidence\": 0.75\n    },\n    {\n      \"signal_type\": \"Strategic Focus\",\n      \"title\": \"AI/ML Container Services and Document AI Solutions\",\n      \"why_it_matters\": \"The introduction of new AI/ML services indicates Snowflake's commitment to enhancing its product offerings in response to market demands.\",\n      \"evidence\": \"Snowflake's AI/ML container services are currently in AWS public preview and are due for full release in June, alongside the Document AI solution.\",\n      \"source_urls\": [\n        \"https://www.ciodive.com/news/snowflake-ceo-appointment-data-ai-cloud-copilot/708970\"\n      ],\n      \"confidence\": 0.7\n    }\n  ]\n}",
+          "query": "agent synthesis"
+        }
+      ],
+      "mode": "live_llm"
+    }
+  ],
+  "decision_events": [
+    {
+      "event_time": "2026-06-03T23:07:50.590223+00:00",
+      "account": "Snowflake",
+      "agent": "research_agent",
+      "decision_type": "agent_analysis",
+      "decision": "Snowflake is actively enhancing its product offerings and strategic partnerships, particularly in the AI and data management sectors, while also focusing on financial performance and innovation.",
+      "confidence": 0.8,
+      "finding_count": 4,
+      "run_mode": "live",
+      "agent_mode": "live_llm",
+      "llm_provider": "openai",
+      "metadata_only": true
+    },
+    {
+      "event_time": "2026-06-03T23:07:50.590223+00:00",
+      "account": "Snowflake",
+      "agent": "technology_agent",
+      "decision_type": "agent_analysis",
+      "decision": "Snowflake is actively evolving its platform to enhance AI capabilities and streamline data engineering processes, as evidenced by its architectural advancements and hiring patterns.",
+      "confidence": 0.85,
+      "finding_count": 4,
+      "run_mode": "live",
+      "agent_mode": "live_llm",
+      "llm_provider": "openai",
+      "metadata_only": true
+    },
+    {
+      "event_time": "2026-06-03T23:07:50.590223+00:00",
+      "account": "Snowflake",
+      "agent": "organization_agent",
+      "decision_type": "agent_analysis",
+      "decision": "Snowflake is undergoing significant leadership changes and strategic shifts towards AI and machine learning, with a focus on expanding its workforce and product offerings in these areas.",
+      "confidence": 0.8,
+      "finding_count": 5,
+      "run_mode": "live",
+      "agent_mode": "live_llm",
+      "llm_provider": "openai",
+      "metadata_only": true
+    },
+    {
+      "event_time": "2026-06-03T23:07:50.590223+00:00",
+      "account": "Snowflake",
+      "agent": "opportunity_agent",
+      "decision_type": "agent_analysis",
+      "decision": "Snowflake is strategically enhancing its product offerings and capabilities in AI and data management through acquisitions, leadership changes, and new product launches, while also focusing on financial performance.",
+      "confidence": 0.85,
+      "finding_count": 5,
+      "run_mode": "live",
+      "agent_mode": "live_llm",
+      "llm_provider": "openai",
+      "metadata_only": true
+    }
+  ]
+}

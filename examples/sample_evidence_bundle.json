@@ -1,0 +1,17 @@
+{
+  "run_id": "run_demo_001",
+  "account_name": "Acme Bank",
+  "canonical_domain": "acmebank.example",
+  "source_name": "public careers page",
+  "source_type": "external",
+  "query_used": "Acme Bank data platform engineer real-time analytics",
+  "result_found": true,
+  "evidence_reference": "https://example.com/careers/demo-job",
+  "date_checked": "2026-06-01",
+  "confidence": "medium",
+  "summary": "Synthetic example: careers page suggests investment in streaming analytics and platform engineering.",
+  "raw_facts": [
+    "Role mentions streaming data",
+    "Role mentions analytics platform ownership"
+  ]
+}

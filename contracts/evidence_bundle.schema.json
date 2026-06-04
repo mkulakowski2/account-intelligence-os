@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvidenceBundleRecord",
+  "type": "object",
+  "required": [
+    "run_id",
+    "account_name",
+    "canonical_domain",
+    "source_name",
+    "source_type",
+    "query_used",
+    "result_found",
+    "date_checked",
+    "confidence",
+    "summary"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "account_name": {
+      "type": "string"
+    },
+    "canonical_domain": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "internal",
+        "external",
+        "signal",
+        "competitor",
+        "community"
+      ]
+    },
+    "query_used": {
+      "type": "string"
+    },
+    "result_found": {
+      "type": "boolean"
+    },
+    "evidence_reference": {
+      "type": "string"
+    },
+    "date_checked": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "raw_facts": {
+      "type": "array"
+    }
+  }
+}

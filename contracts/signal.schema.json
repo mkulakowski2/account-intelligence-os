@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Signal",
+  "type": "object",
+  "required": [
+    "signal_id",
+    "account_name",
+    "signal_type",
+    "summary",
+    "source_name",
+    "observed_at",
+    "confidence"
+  ],
+  "properties": {
+    "signal_id": {
+      "type": "string"
+    },
+    "account_name": {
+      "type": "string"
+    },
+    "canonical_domain": {
+      "type": "string"
+    },
+    "signal_type": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "observed_at": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "raw_facts": {
+      "type": "array"
+    },
+    "tags": {
+      "type": "array"
+    }
+  }
+}
